@@ -3,7 +3,7 @@ import './App.css';
 import Footer from './componets/Sections/Footer';
 import {dummyData } from './api/dummydata';
 import LayOut from './componets/LayOut';
-import { Routes, Route, Outlet } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import AllProductVisual from './componets/Pages/AllProductVisual';
 import HomeSection from './componets/Sections/HomeSection';
 
