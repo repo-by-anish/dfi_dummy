@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Footer from './componets/Sections/Footer';
+import {dummyData } from './api/dummydata';
+import LayOut from './componets/LayOut';
+import { Routes, Route, Outlet } from "react-router-dom"
+import AllProductVisual from './componets/Pages/AllProductVisual';
+import HomeSection from './componets/Sections/HomeSection';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/*" element={<LayOut />}>
+          <Route index element={<HomeSection/>} />
+          <Route path="products" element={<AllProductVisual products={dummyData} />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </>
   );
 }
+
 
 export default App;
