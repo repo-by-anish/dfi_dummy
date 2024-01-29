@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import Products from "./Products";
 import { dummyDataType } from "../../api/dummydata"
 import Button from "../basics/Button";
-const ProductsSection: React.FC<{ products: dummyDataType[] }> = ({ products }): JSX.Element => {
+import { dummyData } from "../../api/dummydata";
+
+const ProductsSection = (): JSX.Element => {
     const [slide, setSlide] = useState<string>("exotic");
     const [animationDirection, setAnimationDirection] = useState<string>("");
     const [currentSlide, setCurrentSlide] = useState<number>(0);
     const [index, setIndex] = useState<number>(0);
     const [prod_to_render, setProd_to_render] = useState<dummyDataType[]>([]);
+    const [products, _] = useState<dummyDataType[]>(dummyData);
 
     const slides = {
         exotic: "All Exotic Delights",

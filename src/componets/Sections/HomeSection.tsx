@@ -1,6 +1,5 @@
 import React from "react";
 import { dummyData } from "../../api/dummydata";
-import { blogs } from "../../api/dummydata";
 import "./sections.css"
 import HeroSection from "./HeroSection";
 import ProductsSection from "./ProductsSection";
@@ -29,7 +28,7 @@ const HomeSection = (): JSX.Element => {
             >
                 <HeroSection />
             </motion.div>
-            <ProductsSection products={dummyData} />
+            <ProductsSection/>
 
             <motion.div
                 initial={{ y: -350, opacity: 0 }}
@@ -65,7 +64,7 @@ const HomeSection = (): JSX.Element => {
                 transition={{ duration: 2, type: "spring" }}
                 viewport={{ once: true }}
             >
-            <BlogSlider blogs={blogs} />
+            <BlogSlider/>
             </motion.div>
         </main>
     )

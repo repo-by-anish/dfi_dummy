@@ -193,25 +193,31 @@ export const dummyData: dummyDataType[] = [
     },
 ];
 
-export const blogs = [
+export interface blogType{
+    id: number,
+    image: string,
+    transcript: string
+}
+
+export const blogs: blogType[] = [
     {
         id: 1,
-        image: 'image/blog_1.jpg',
+        image: 'https://cdn.jsdelivr.net/gh/repo-by-anish/image_for_DFI@master/blog_1.jpg',
         transcript: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
     {
         id: 2,
-        image: 'image/blog_1.jpg',
+        image: 'https://cdn.jsdelivr.net/gh/repo-by-anish/image_for_DFI@master/blog_1.jpg',
         transcript: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
         id: 3,
-        image: 'image/blog_1.jpg',
+        image: 'https://cdn.jsdelivr.net/gh/repo-by-anish/image_for_DFI@master/blog_1.jpg',
         transcript: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
     },
     {
         id: 4,
-        image: 'image/blog_1.jpg',
+        image: 'https://cdn.jsdelivr.net/gh/repo-by-anish/image_for_DFI@master/blog_1.jpg',
         transcript: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     }
 ];

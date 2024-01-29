@@ -5,18 +5,9 @@ import Slider from 'react-slick';
 import { Typography, Card, CardContent, CardMedia } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { blogs } from '../../api/dummydata';
 
-interface Blog {
-  id: number;
-  image: string;
-  transcript: string;
-}
-
-interface BlogSliderProps {
-  blogs: Blog[];
-}
-
-const BlogSlider: React.FC<BlogSliderProps> = ({ blogs }) => {
+const BlogSlider= (): JSX.Element => {
     
     const clickHandler = (id: number) => {
         const url = `/blog/${id}`;
