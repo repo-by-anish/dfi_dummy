@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import VideoPlayer from '../basics/VideoPlayer';
 
-
-interface AdvertisementProps {
-    videoSrc: string;
-    posterSrc: string;
-}
-
 const Advertisement = (): JSX.Element => {
     const [isPlaying, setIsPlaying] = useState(false);
 
