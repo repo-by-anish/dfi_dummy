@@ -6,7 +6,7 @@ export default function TestmonialItem() {
         <div className="testmonial_item">
             <div className="tm__main">
                 <div className="testm_dp_body">
-                    <img src="image/dp_img.png" alt="" />
+                    <img src="https://cdn.jsdelivr.net/gh/repo-by-anish/image_for_DFI@master/dp_img.png" alt="" />
                     <h3 className="tm_name">ABC Kumar</h3>
                 </div>
                 <blockquote>

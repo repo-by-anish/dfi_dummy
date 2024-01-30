@@ -31,7 +31,7 @@ const HeroSection = () => {
                     </nav>
                 </header>
                 <blockquote className="hero__quote">
-                    Welcome to <b>XT Exports</b>, your <b>B2B</b> destination for top-notch fruit import and export services. Explore efficient and <b>cost-effective global trade</b> with us!
+                    Welcome to <b>Diamond <span style={{ color: "var(--secondary-color3)" }}>Fruits</span> International</b>, your <b>B2B</b> destination for top-notch fruit import and export services. Explore efficient and <b>cost-effective global trade</b> with us!
                 </blockquote>
                 <div onClick={onContactClick} className="hero__btn">
                     <Button size={{ width: screenWidth <= 500 ?250:400, height: screenWidth <= 500 ? 35 : 55 }} color="var(--tertiary-color)" name={"Contact for More Details"} fontSize={"16px"} backgroundColor="var(--primary-color)" />

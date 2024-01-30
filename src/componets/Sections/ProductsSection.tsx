@@ -3,6 +3,7 @@ import Products from "./Products";
 import { dummyDataType } from "../../api/dummydata"
 import Button from "../basics/Button";
 import { dummyData } from "../../api/dummydata";
+import { useNavigate } from "react-router-dom";
 
 const ProductsSection = (): JSX.Element => {
     const [slide, setSlide] = useState<string>("exotic");
@@ -11,6 +12,7 @@ const ProductsSection = (): JSX.Element => {
     const [index, setIndex] = useState<number>(0);
     const [prod_to_render, setProd_to_render] = useState<dummyDataType[]>([]);
     const [products, _] = useState<dummyDataType[]>(dummyData);
+    const navigate = useNavigate();
 
     const slides = {
         exotic: "All Exotic Delights",
@@ -38,7 +40,7 @@ const ProductsSection = (): JSX.Element => {
 
 
     const renderToAllProducts = () => {
-        window.location.href = "/products";
+        navigate("/products"); // navigate to "/products";
     }
 
 
@@ -66,13 +68,13 @@ const ProductsSection = (): JSX.Element => {
                     }
                 </div>
             </div>
-            <div onClick={renderToAllProducts} className="products__content">
+            <div className="products__content">
                 <div className={animationDirection}>
                     <Products products_to_render={prod_to_render} />
                 </div>
                 {
                     slide === "exotic" && (
-                        <div className="products__button">
+                        <div onClick={renderToAllProducts} className="products__button">
                             <Button size={{ width: 120, height: 35 }} color={"var(--tertiary-color)"} fontSize={"16px"} backgroundColor={"var(--primary-color)"} name={"View All"} />
                         </div>
                     )

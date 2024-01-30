@@ -131,7 +131,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    bottom: -200px;
+    bottom: -240px;
     background-image: url("https://cdn.jsdelivr.net/gh/repo-by-anish/image_for_DFI@master/bg_img/hero1_back.png");
     z-index: 2;
 }

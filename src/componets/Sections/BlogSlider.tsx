@@ -45,11 +45,11 @@ const BlogSlider= (): JSX.Element => {
               image={blog.image}
               alt={`Blog ${blog.id}`}
             />
-            <CardContent sx={{backgroundColor: "var(--primary-color50)", fontSize: "16px", color: "var(--back-color-1)"}}>
+            <CardContent sx={{backgroundColor: "var(--primary-color35)", fontSize: "16px", color: "var(--back-color-1)"}}>
               <Typography gutterBottom variant="h6" component="div">
                 Blog {blog.id}
               </Typography>
-              <Typography sx={{color: "var(--quaternary-color)"}} variant="body2" color="text.secondary">
+              <Typography sx={{color: "var(--primary-color)"}} variant="body2" color="text.secondary">
                 {blog.transcript}
               </Typography>
             </CardContent>
