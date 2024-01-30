@@ -11,7 +11,6 @@ const Testmonials = () => {
                 <TestmonialItem/>
                 <TestmonialItem/>
                 <TestmonialItem/>
-                <TestmonialItem/>
             </Carousel>
         </section>
     )

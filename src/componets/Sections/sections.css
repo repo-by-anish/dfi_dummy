@@ -198,7 +198,7 @@ header {
     border-bottom: 2px solid var(--primary-color2);
 }
 
-.slider div {
+.slide {
     font-family: var(--font-jura);
     height: 50px;
     display: flex;
@@ -476,6 +476,12 @@ header {
     height: 500px;
 }
 
+.blog_slider{
+    /* height: 350px; */
+    margin: 2rem auto;
+    width: 75%;
+}
+
 /* Footer Section */
 
 .footer {
@@ -579,9 +585,9 @@ header {
 
 @media screen and (max-width: 600px) {
 
-    body{
+    /* body{
         overflow-x: hidden;
-    } 
+    }  */
 
     .notch a {
         font-size: 13px;
@@ -610,6 +616,7 @@ header {
         padding: 0 30px;
         background-size: cover;
         height: 300px;
+        width: calc( 100vw - 60px);
     }
 
     .hero__content-1 nav {
@@ -626,10 +633,36 @@ header {
     }
 
     .hero__quote {
-        width: calc(100vw - 20px);
+        width: calc(100vw - 30px);
         font-size: 17px;
-        padding-inline-end: 10px;
         margin-block-start: 0;
+    }
+
+    .product__slider h2{
+        padding: 0.8rem;
+        font-size: 20px;
+    }
+
+    .products__content{
+        padding-bottom: 3rem;
+    }
+
+    .products__button{
+        bottom: 30px;
+    }
+
+    .slider{
+        height: 40px;
+    }
+
+    .slide{
+        font-size: 12px;
+        height: 36px;
+        padding: 4px;
+    }
+    .products{
+        width: 96%;
+        margin-top: 0;
     }
 
     .advertisement-video {
@@ -641,6 +674,13 @@ header {
     .advertisement {
         display: block;
         text-align: center;
+    }
+
+    .advertisement-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
     }
 
     .adv_quote h1 {
@@ -749,6 +789,7 @@ header {
 
     .fc__content {
         padding: 10px;
+        display: inline;
     }
 
     .footer_copyright {

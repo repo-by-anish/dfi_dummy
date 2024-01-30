@@ -1,7 +1,7 @@
 
 
 
-export type dummyDataType={
+export type prodDataType={
     prod_id: number,
     prod_name: string,
     prod_desc: string,
@@ -11,7 +11,7 @@ export type dummyDataType={
     prod_type: string[]
 }
 
-export const dummyData: dummyDataType[] = [
+export const products: prodDataType[] = [
     {
         prod_id: 110,
         prod_name: "Granny Smith Apple",

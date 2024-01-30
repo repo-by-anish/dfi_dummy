@@ -48,14 +48,14 @@ export default function VideoPlayer({
     }, []);
 
     return (
-        <React.Fragment>
+        <>
             <Dialog
                 open={isPlaying}
                 onClose={handlePlayButtonClick}
                 PaperComponent={PaperComponent}
                 aria-labelledby="draggable-dialog-title"
                 maxWidth="xl"
-                sx={{ margin: 0, padding: 0}}
+                sx={{ margin: 0, padding: 0 }}
             >
                 <DialogContent sx={{ margin: 0, padding: 0 }}>
                     <DialogContentText>
@@ -66,7 +66,7 @@ export default function VideoPlayer({
                             autoPlay
                             style={{ display: 'block', margin: 0, width: '100%' }}
                         >
-                            <source src={"https://cdn.jsdelivr.net/gh/repo-by-anish/image_for_DFI/video/video.mp4"} type="video/mp4" />
+                            <source src="https://cdn.jsdelivr.net/gh/repo-by-anish/image_for_DFI/video/video.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </DialogContentText>
@@ -79,6 +79,6 @@ export default function VideoPlayer({
                     />
                 </DialogActions>
             </Dialog>
-        </React.Fragment>
+        </>
     );
 }

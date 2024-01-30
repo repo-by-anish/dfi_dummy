@@ -1,18 +1,17 @@
-// BlogSlider.tsx
-
 import React from 'react';
 import Slider from 'react-slick';
 import { Typography, Card, CardContent, CardMedia } from '@mui/material';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { blogs } from '../../api/dummydata';
+import { screenWidth, useData } from '../../api/fetctData';
 
-const BlogSlider= (): JSX.Element => {
-    
-    const clickHandler = (id: number) => {
-        const url = `/blog/${id}`;
-        window.location.href = url;
-    }
+const BlogSlider = (): JSX.Element => {
+  const { blogs } = useData();
+
+  const clickHandler = (id: number) => {
+    const url = `/blog/${id}`;
+    window.location.href = url;
+  };
 
   const settings = {
     dots: true,
@@ -35,21 +34,31 @@ const BlogSlider= (): JSX.Element => {
   };
 
   return (
-    <div style={{ height: '380px', margin: '0 auto', width: '75%', marginTop: "180px" }}>
+    <div className="blog_slider">
       <Slider {...settings}>
         {blogs.map((blog) => (
-          <Card onClick={() => clickHandler(blog.id)} key={blog.id} sx={{ maxWidth: 345, margin: '0 auto', boxShadow: 'none', cursor: 'pointer' }}>
+          <Card
+            key={blog.id}
+            onClick={() => clickHandler(blog.id)}
+            sx={{
+              maxWidth: 345,
+              margin: '0 auto',
+              boxShadow: 'none',
+              cursor: 'pointer',
+              paddingTop: screenWidth < 600 ? '2px' : '4rem',
+            }}
+          >
             <CardMedia
               component="img"
               height="140"
               image={blog.image}
               alt={`Blog ${blog.id}`}
             />
-            <CardContent sx={{backgroundColor: "var(--primary-color35)", fontSize: "16px", color: "var(--back-color-1)"}}>
+            <CardContent sx={{ backgroundColor: 'var(--primary-color35)', fontSize: '16px', color: 'var(--back-color-1)' }}>
               <Typography gutterBottom variant="h6" component="div">
                 Blog {blog.id}
               </Typography>
-              <Typography sx={{color: "var(--primary-color)"}} variant="body2" color="text.secondary">
+              <Typography sx={{ color: 'var(--primary-color)' }} variant="body2" color="text.secondary">
                 {blog.transcript}
               </Typography>
             </CardContent>

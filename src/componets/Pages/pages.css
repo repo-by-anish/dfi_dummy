@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
-    --font-nunito: 'nunito', sans-serif;
+    --font-nunito: 'Nunito', sans-serif;
     --font-jura: 'Jura', sans-serif;
     --font-itim: 'Itim', sans-serif;
     --font-ubuntu: 'Ubuntu', sans-serif;
@@ -21,7 +21,6 @@
 
 .all_product_visual {
     height: 100%;
-    margin-top: 0;
     padding-bottom: 1rem;
     position: relative;
     display: flex;

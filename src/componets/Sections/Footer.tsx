@@ -29,7 +29,7 @@ const Footer = () => {
                                     <p>About Us</p>
                                     <p>Blogs</p>
                                     <p>FAQ</p>
-                                    <p>Our Plocy</p>
+                                    <p>Our Policy</p>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                                     <p>About Us</p>
                                     <p>Blogs</p>
                                     <p>FAQ</p>
-                                    <p>Our Plocy</p>
+                                    <p>Our Policy</p>
                                 </div>
                             </div>
                         </div>
@@ -61,9 +61,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className="footer_copyright">© 2024 Diamond fruits International. All rights reserved.</p>
+            <p className="footer_copyright">© 2024 Diamond Fruits International. All rights reserved.</p>
         </footer>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

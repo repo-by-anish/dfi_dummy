@@ -1,5 +1,6 @@
 import React from "react";
 import Counter from "../basics/Counter";
+
 const Partners = () => {
     return (
         <section className="partners-section">
@@ -23,7 +24,7 @@ const Partners = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Partners
+export default Partners;
